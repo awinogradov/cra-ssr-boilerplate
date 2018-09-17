@@ -1,5 +1,7 @@
 # Create React App (improved)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/awinogradov/cra-ssr-boilerplate.svg)](https://greenkeeper.io/)
+
 ## What's inside?
 
 - [create-react-app](https://github.com/facebook/create-react-app) as base and `react-scripts` without ejecting;
