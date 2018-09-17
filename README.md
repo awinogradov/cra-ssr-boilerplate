@@ -34,4 +34,4 @@ Point your browser to [http://localhost:3000/_](http://localhost:3000/_). __What
 
 Point your browser to [http://localhost:3000/](http://localhost:3000/).
 
-### License [MIT](blob/master/LICENSE)
+### License [MIT](LICENSE)
