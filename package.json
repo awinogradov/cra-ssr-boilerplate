@@ -10,7 +10,7 @@
     "react-dom": "16.5.1"
   },
   "scripts": {
-    "start": "NODE_CONFIG_DIR=.config NODE_ENV=development ts-node server",
+    "start": "NODE_CONFIG_DIR=.config NODE_ENV=development ts-node-dev server",
     "start:production": "NODE_CONFIG_DIR=.config NODE_ENV=production node dist/server",
     "build": "npm run build:clean && npm run build:compile && npm run build:static",
     "build:clean": "rm -r dist",
@@ -29,6 +29,7 @@
     "react-app-rewired": "1.6.2",
     "react-scripts": "1.1.5",
     "ts-node": "7.0.1",
+    "ts-node-dev": "1.0.0-pre.30",
     "typescript": "3.0.3"
   },
   "proxy": {

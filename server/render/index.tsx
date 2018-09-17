@@ -12,7 +12,7 @@ const meta = `
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">`;
 const title = `<title>${config.get('title')}</title>`;
-const styles = config.get('static.js') ? `<link rel="stylesheet" type="text/css" href="${config.get('static.css')}">` : '';
+const styles = `<link rel="stylesheet" type="text/css" href="${config.get('static.css')}">`;
 const scripts = `<script type="text/javascript" src="${config.get('static.js')}"></script>`;
 
 router.get(`/${config.get('root')}`, (_, res) => {
