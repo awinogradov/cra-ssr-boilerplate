@@ -20,7 +20,7 @@ module.exports = function override(config, env) {
             openAnalyzer: false
         })
 
-        cpx.copySync('src/**/*.css', 'dist/src')
+        cpx.copySync('src/**/*.css', 'dist')
     }
 
     return config

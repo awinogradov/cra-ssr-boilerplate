@@ -27,15 +27,11 @@
       
       "jsx": "react",
 
-      "rootDir": ".",
+      "rootDir": "src",
       "outDir": "dist",
 
       "sourceMap": true
     },
-    "include": [
-      "server/**/*.ts",
-      "src/custom.d.ts"
-    ],
     "exclude": [
       "node_modules"
     ]

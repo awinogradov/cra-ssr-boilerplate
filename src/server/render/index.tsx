@@ -3,7 +3,7 @@ import * as ReactDOMServer from 'react-dom/server';
 import * as express from 'express';
 import * as config from 'config';
 
-import { App } from '../../src/App';
+import { App } from '../../view/App';
 
 const render = express();
 const router = express.Router();
