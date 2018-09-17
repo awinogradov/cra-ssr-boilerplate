@@ -16,7 +16,8 @@
     "build": "npm run build:clean && npm run build:compile && npm run build:static",
     "build:clean": "rm -r dist",
     "build:compile": "tsc",
-    "build:static": "react-app-rewired build --config-overrides ./.config/react-scripts.js"
+    "build:static": "react-app-rewired build --config-overrides ./.config/react-scripts.js",
+    "test": "echo 'No tests yet...'"
   },
   "devDependencies": {
     "@types/compression": "0.0.36",
