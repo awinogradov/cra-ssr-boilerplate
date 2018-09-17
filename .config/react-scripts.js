@@ -16,7 +16,8 @@ module.exports = function override(config, env) {
     if (env === 'production') {
         config = rewireWebpackBundleAnalyzer(config, env, {
             analyzerMode: 'static',
-            reportFilename: 'report.html'
+            reportFilename: 'bundle-report.html',
+            openAnalyzer: false
         })
 
         cpx.copySync('src/**/*.css', 'dist/src')
