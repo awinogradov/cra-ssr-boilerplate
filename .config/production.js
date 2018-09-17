@@ -1,6 +1,7 @@
 const assets = require('../build/asset-manifest');
 
 module.exports = {
+    port: process.env.PORT || 3000,
     root: '',
     static: {
         js: `/${assets['main.js']}`,
