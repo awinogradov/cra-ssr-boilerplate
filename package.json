@@ -13,10 +13,12 @@
   "scripts": {
     "start": "NODE_CONFIG_DIR=.config NODE_ENV=development ts-node-dev --ignore-watch src/*.css --ignore-watch src/**/*.css --ignore-watch src/*.tsx --ignore-watch src/**/*.tsx src/server",
     "start:production": "NODE_CONFIG_DIR=.config NODE_ENV=production node dist/server",
+    "start:docker": "docker run -d --name cra-ssr-cs-hmr -p 3000:3000 cra-ssr-cs-hmr:latest",
     "build": "npm run build:clean && npm run build:compile && npm run build:static",
     "build:clean": "rm -r dist",
     "build:compile": "tsc",
     "build:static": "react-app-rewired build --config-overrides ./.config/react-scripts.js",
+    "build:docker": "docker build -t cra-ssr-cs-hmr .",
     "test": "echo 'No tests yet...'"
   },
   "devDependencies": {
