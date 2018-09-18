@@ -2,11 +2,16 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom'
 
 import { App } from './view/App'
-
 import './index.css'
 
-const registerServiceWorker = require('./registerServiceWorker')
+require('./registerServiceWorker')()
 
-ReactDOM.hydrate(<App />, document.getElementById('root'))
+const render = (Component: React.ComponentType) => {
+    ReactDOM.hydrate(<Component />, document.getElementById('root'))
+}
 
-registerServiceWorker()
+render(App);
+
+if (module.hot) {
+    module.hot.accept('./view/App', () => render(require('./view/App').App));
+}

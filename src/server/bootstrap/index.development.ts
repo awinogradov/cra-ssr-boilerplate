@@ -12,6 +12,7 @@ import { run } from '../run';
 
     render.use('/static', webpackDevServerProxy);
     render.use('/sockjs-node', webpackDevServerProxy);
+    render.use('/*.hot-update.js*', webpackDevServerProxy);
     render.use('/service-worker.js', webpackDevServerProxy);
 
     await run(render);
