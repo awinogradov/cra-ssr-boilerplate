@@ -1,17 +1,17 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom'
 
+import { register } from './registerServiceWorker';
 import { App } from './view/App'
+
 import './index.css'
 
-require('./registerServiceWorker')()
+register()
 
 const render = (Component: React.ComponentType) => {
     ReactDOM.hydrate(<Component />, document.getElementById('root'))
 }
 
-render(App);
+render(App)
 
-if (module.hot) {
-    module.hot.accept('./view/App', () => render(require('./view/App').App));
-}
+module.hot && module.hot.accept('./view/App', () => render(require('./view/App').App))
