@@ -7,7 +7,7 @@
 - [create-react-app](https://github.com/facebook/create-react-app) as base and `react-scripts` without ejecting;
 - [express](https://github.com/expressjs/express) as a server;
 - [stream rendering](https://reactjs.org/docs/react-dom-server.html#rendertonodestream) because it's fast;
-- [react-app-rewired](https://github.com/timarney/react-app-rewired) for improving base `react-scripts`
+- [react-app-rewired](https://github.com/timarney/react-app-rewired) for improving base `react-scripts`;
 - [TypeScript](https://www.typescriptlang.org/) as a main language for client and server;
 - [ts-node-dev](https://github.com/whitecolor/ts-node-dev) for compiling with watching and reloading server in the develepment mode;
 
