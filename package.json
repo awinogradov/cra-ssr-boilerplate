@@ -2,6 +2,17 @@
   "name": "cra-ssr-boilerplate",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "NODE_CONFIG_DIR=.config NODE_ENV=development ts-node-dev --ignore-watch src/view src/server",
+    "start:production": "NODE_CONFIG_DIR=.config NODE_ENV=production node dist/server",
+    "start:docker": "docker run -d --name cra-ssr-cs-hmr -p 3000:3000 cra-ssr-cs-hmr:latest",
+    "build": "npm run build:clean && npm run build:compile && npm run build:static",
+    "build:clean": "rm -r dist",
+    "build:compile": "tsc",
+    "build:static": "react-app-rewired build --config-overrides ./.config/react-scripts.js",
+    "build:docker": "docker build -t cra-ssr-cs-hmr .",
+    "test": "jest"
+  },
   "dependencies": {
     "compression": "1.7.3",
     "config": "2.0.1",
@@ -10,31 +21,23 @@
     "react": "16.5.1",
     "react-dom": "16.5.1"
   },
-  "scripts": {
-    "start": "NODE_CONFIG_DIR=.config NODE_ENV=development ts-node-dev --ignore-watch src/*.css --ignore-watch src/**/*.css --ignore-watch src/*.tsx --ignore-watch src/**/*.tsx src/server",
-    "start:production": "NODE_CONFIG_DIR=.config NODE_ENV=production node dist/server",
-    "start:docker": "docker run -d --name cra-ssr-cs-hmr -p 3000:3000 cra-ssr-cs-hmr:latest",
-    "build": "npm run build:clean && npm run build:compile && npm run build:static",
-    "build:clean": "rm -r dist",
-    "build:compile": "tsc",
-    "build:static": "react-app-rewired build --config-overrides ./.config/react-scripts.js",
-    "build:docker": "docker build -t cra-ssr-cs-hmr .",
-    "test": "echo 'No tests yet...'"
-  },
   "devDependencies": {
     "@types/compression": "0.0.36",
     "@types/config": "0.0.34",
     "@types/express": "4.16.0",
     "@types/http-proxy-middleware": "0.17.5",
+    "@types/jest": "23.3.2",
     "@types/node": "10.10.1",
     "@types/react": "16.4.14",
     "@types/react-dom": "16.0.7",
     "cpx": "1.5.0",
     "http-proxy-middleware": "0.19.0",
+    "jest-cli": "23.6.0",
     "react-app-rewire-typescript": "2.0.2",
     "react-app-rewire-webpack-bundle-analyzer": "1.0.1",
     "react-app-rewired": "1.6.2",
     "react-scripts": "1.1.5",
+    "ts-jest": "23.1.4",
     "ts-node": "7.0.1",
     "ts-node-dev": "1.0.0-pre.30",
     "typescript": "3.0.3"
