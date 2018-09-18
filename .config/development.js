@@ -1,6 +1,6 @@
 module.exports = {
-    port: process.env.PORT || 3001,
-    root: '_',
+    port: 3000,
+    root: '',
     static: {
         js: '/static/js/bundle.js',
         css: ''

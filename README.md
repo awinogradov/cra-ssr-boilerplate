@@ -20,7 +20,10 @@
 ❯ npm start
 ```
 
-Point your browser to [http://localhost:3000/_](http://localhost:3000/_). __What the `_` in the url?__ So, it's small limitation in the development mode. `react-scripts` uses `webpack-dev-server` for incremental building and HMR, it works fine and the only one way to use it with SSR it's proxy. `webpack-dev-server` compiles all static files, but `Express` renders `html` on the different port. It's the reason why we need to use the different entry point for the root route. In production mode it's `/`. Don't worry! ;)
+Point your browser to [http://localhost:3000/](http://localhost:3000/). 
+### How it works
+
+`react-scripts` uses `webpack-dev-server` for incremental building and HMR, it works fine and the only one way to use it with SSR it's proxy. `webpack-dev-server` compiles all static files, but `Express` renders `html` on the different port. It's the reason why we need to use the proxy for static files and ws to `webpack-dev-server` from `Express`.
 
 ## Building
 
