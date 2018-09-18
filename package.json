@@ -19,7 +19,7 @@
     "express": "4.16.3",
     "ignore-styles": "5.0.1",
     "react": "16.5.2",
-    "react-dom": "16.5.1"
+    "react-dom": "16.5.2"
   },
   "devDependencies": {
     "@types/compression": "0.0.36",
