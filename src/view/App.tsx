@@ -1,31 +1,28 @@
 import * as React from 'react';
+import { Route, Link } from 'react-router-dom';
 import * as Loadable from 'react-loadable';
 
 import './App.css';
 
-const LoadableIntro = Loadable.Map({
-  loader: {
-    chunk: () => import('./Intro')
-  },
-  loading() {
-    return <div>Loading...</div>
-  },
-  render({ chunk }) {
-    const Intro = chunk.Intro;
-    return <Intro />;
-  }
+export const Intro = Loadable.Map({
+    loader: {
+        chunk: () => import('./Intro'),
+    },
+    loading: () => <i>Loading...</i>,
+    render: ({ chunk }) => {
+        const Intro = chunk.Intro;
+
+        return <Intro/>;
+    }
 });
 
-export class App extends React.Component {
-  render() {
-    return (
-      <div className="App">
+export const App = () => (
+    <div className="App">
         <header className="App-header">
-          <span className="App-logo" />
-          <h1 className="App-title">Welcome to React</h1>
+            <span className="App-logo" />
+            <h1 className="App-title">Welcome to React!</h1>
         </header>
-        <LoadableIntro />
-      </div>
-    );
-  }
-}
+        <Link to="/intro">Go to intro!</Link>
+        <Route path="/intro" component={Intro} />
+    </div>
+);

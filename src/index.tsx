@@ -1,17 +1,24 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom'
+import * as ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { preloadReady } from 'react-loadable';
 
 import { register } from './registerServiceWorker';
-import { App } from './view/App'
+import { App } from './view/App';
 
-import './index.css'
+import './index.css';
 
-register()
+register();
 
-const render = (Component: React.ComponentType) => {
-    ReactDOM.hydrate(<Component />, document.getElementById('root'))
-}
+const render = (Component: React.ComponentType) => preloadReady().then(() =>
+    ReactDOM.hydrate(
+        <Router>
+            <Component />
+        </Router>,
+        document.getElementById('root')
+    )
+);
 
-render(App)
+render(App);
 
-module.hot && module.hot.accept('./view/App', () => render(require('./view/App').App))
+module.hot && module.hot.accept('./view/App', () => render(require('./view/App').App));
