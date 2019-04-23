@@ -52,7 +52,7 @@
     "null-loader": "^0.1.1",
     "react-app-rewire-clean-typescript": "1.1.0",
     "react-app-rewire-webpack-bundle-analyzer": "1.0.1",
-    "react-app-rewired": "1.6.2",
+    "react-app-rewired": "2.1.2",
     "react-scripts": "2.0.5",
     "start-server-webpack-plugin": "2.2.5",
     "ts-jest": "23.10.5",
