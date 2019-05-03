@@ -58,7 +58,7 @@
     "ts-jest": "23.10.5",
     "ts-loader": "5.2.1",
     "ts-node": "7.0.1",
-    "ts-node-dev": "1.0.0-pre.30",
+    "ts-node-dev": "1.0.0-pre.35",
     "typescript": "3.1.1",
     "webpack-cli": "3.1.2",
     "webpack-node-externals": "1.7.2"
