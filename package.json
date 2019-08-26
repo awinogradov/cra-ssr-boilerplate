@@ -51,7 +51,7 @@
     "node-hot-loader": "^1.12.1",
     "null-loader": "^0.1.1",
     "react-app-rewire-clean-typescript": "1.1.0",
-    "react-app-rewire-webpack-bundle-analyzer": "1.0.1",
+    "react-app-rewire-webpack-bundle-analyzer": "1.1.0",
     "react-app-rewired": "1.6.2",
     "react-scripts": "2.0.5",
     "start-server-webpack-plugin": "2.2.5",
