@@ -48,7 +48,7 @@
     "http-proxy-middleware": "0.19.0",
     "isomorphic-style-loader": "4.0.0",
     "jest-cli": "23.6.0",
-    "node-hot-loader": "^1.12.1",
+    "node-hot-loader": "^1.17.7",
     "null-loader": "^0.1.1",
     "react-app-rewire-clean-typescript": "1.1.0",
     "react-app-rewire-webpack-bundle-analyzer": "1.0.1",
