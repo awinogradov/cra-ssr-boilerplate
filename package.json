@@ -18,7 +18,7 @@
     "compression": "1.7.3",
     "cookie-parser": "1.4.3",
     "express": "4.16.3",
-    "morgan": "1.9.1",
+    "morgan": "1.10.0",
     "react": "16.6.2",
     "react-dom": "16.6.2",
     "react-loadable": "5.5.0",
