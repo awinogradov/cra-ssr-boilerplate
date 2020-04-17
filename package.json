@@ -55,7 +55,7 @@
     "react-app-rewired": "1.6.2",
     "react-scripts": "2.0.5",
     "start-server-webpack-plugin": "2.2.5",
-    "ts-jest": "23.10.5",
+    "ts-jest": "25.4.0",
     "ts-loader": "5.2.1",
     "ts-node": "7.0.1",
     "ts-node-dev": "1.0.0-pre.30",
